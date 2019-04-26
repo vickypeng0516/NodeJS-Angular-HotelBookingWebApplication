@@ -1,4 +1,4 @@
-# Final Project Hotel Booking Web Application
+# Hotel Booking Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 Author: Yanfei Peng, Haozheng Yi, Enshu Shang, Mingchang Chen
