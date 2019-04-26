@@ -48,7 +48,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## How to run
 
-Run `node server.js` first in a terminal to start the back-end server. Then, run `ng serve` in another terminal to start angular/cli. Fianlly, visit localhost:4200.
+Run `node server.js` first in a terminal to start the back-end server. Then, run `ng serve` in another terminal to start angular/cli. Finally, visit localhost:4200.
 
 ## Further help
 
