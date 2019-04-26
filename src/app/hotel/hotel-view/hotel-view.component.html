@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YelpCamp</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Hotels</a>
+        <a class="navbar-brand">login in as {{userId}}</a>
+        <a class="navbar-brand" (click)="viewOrder()">View Orders</a>
+        <a class="navbar-brand" href="/">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <header class="jumbotron">
+    <div class="container">
+      <h1>View Our Hotel Selection</h1>
+      <p>Search For Hotel</p>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <form (submit)="onSearch(postForm)" id="search-form" #postForm="ngForm">
+              <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                <input type="text" class="form-control search-slt" placeholder="Search By Name" name="searchName" ngModel/>
+              </div>
+              <button class="btn btn-danger wrn-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-lg-12">
+      <h3> View Our Hotel Selection</h3>
+    </div>
+  </div>
+  <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <div *ngIf="hotels.length > 0">
+      <div  *ngFor="let hotel of hotels">
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img src="{{hotel.image}}">
+            <div class="caption">
+              <h4>{{hotel.name}}</h4>
+            </div>
+            <p>
+              <button class="btn btn-primary" (click)="hotelDetail(hotel)">More Info</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+

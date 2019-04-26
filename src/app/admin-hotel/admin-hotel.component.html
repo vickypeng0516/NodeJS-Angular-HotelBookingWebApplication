@@ -1,0 +1,88 @@
+<html>
+<head>
+
+    <title>Administrator Management System</title>
+   
+</head>
+<body>
+    <!--导航-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Administrator Management System</a>
+        </div>
+        <ul class="nav navbar-nav" style="margin-right: 20px">
+            <li><a href="#">&nbsp;Log out<output></output></a></li>
+        </ul>
+    </div>
+    <!--侧边栏-->
+    <div class="navbar-default navbar-collapse" id="sidebar">
+        <ul class="nav">
+            <li>
+                <a href="#sub1" data-toggle="collapse">System Function<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                <ul id="sub1" class="nav collapse">
+                    <li><a href="./../adminmainpage/">&nbsp;&nbsp;&nbsp;Manage User</a></li>
+                    <li><a href="./../adminorder">&nbsp;&nbsp;&nbsp;Manage Order</a></li>
+                    <li><a href="./../adminhotel">&nbsp;&nbsp;&nbsp;Manage Hotel</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <!--主页面-->
+    <div id="main">
+        
+        <!-- 第一行-->
+        <div class="row">
+            <div class="col-sm-12">
+                <!--表格-->
+                <div class="panel panel-default">
+                    <div class="panel-heading"></div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered">
+                            <thead><tr>
+                                <th>User Account</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>E-mail</th>
+                                <th>Phone Number</th>
+                                
+                            </tr></thead>
+                            <tbody *ngIf="hotels.length > 0" >
+                                <tr *ngFor="let h of hotels">
+                                    <td>{{h.userAccount}}</td>
+                                    <td>{{h.firstName}}</td>
+                                    <td>{{h.lastName}}</td>
+                                    <td>{{h.email}}</td>
+                                    <td>{{h.phone}}</td>
+                                    <td></td>
+                                </tr>
+                                
+                                
+                        </table>
+                        <table class="table table-striped table-bordered">
+                                <thead><tr>
+                                    <th>Location</th>
+                                    <th>Price</th>
+                                    <th>Name</th>
+                                    <th>Modify</th>
+                                </tr></thead>
+                                <tbody *ngIf="hotels.length > 0" >
+                                    <tr *ngFor="let h of hotels">
+                                        <td>{{h.location}}</td>
+                                        <td>{{h.price}}</td>
+                                        <td>{{h.name}}</td>
+                                        <td><button href="/anew/todel/@a.id" onclick="return confirm('Are you sure to delete the data?')" (click)="delete(h)">Delete</button></td>
+
+                                    </tr>
+                                    
+                                    
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 第一行-->
+    </div>
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

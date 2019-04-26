@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booking</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Hotels</a>
+        <a class="navbar-brand">login in as {{userId}}</a>
+        <a class="navbar-brand" href="/">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <h1 style="text-align:center"> Book Your Hotel</h1>
+      <div style="width:30%; margin:30px auto;">
+        <form (submit)="onAddOrder(postForm)" #postForm="ngForm" ngNativeValidate>
+          <div class="form-group">
+            <input class="form-control" name="firstName" type="text" placeholder="first name" ngModel required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="lastName" type="text" placeholder="last name" ngModel required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="email" type="email" placeholder="email" ngModel required>
+          </div>
+          <div class="form-group">
+            <input class="form-control"  name="phone" type="text" placeholder="phone" pattern="[0-9]{10}" ngModel required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="date" type="date" placeholder="date" ngModel required>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-lg btn-primary btn-block">Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

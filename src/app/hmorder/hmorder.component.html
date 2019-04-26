@@ -1,0 +1,63 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >Hotel Manager Main Page</a>
+    </div>
+    <div class="nav  navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a (click)="main(hotel)">HomePage</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Shortcut <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a (click)="modifyP(hotel)">Change Password</a></li>
+            <li><a (click)="comp(hotel)">Complete info</a></li>
+            <li class="divider"></li>
+            <li><a (click)="hotelman(hotel)">Manage Hotel</a></li>
+            <li><a (click)="hmorder(hotel)">Order</a></li>
+          </ul>
+        </li>
+        <li class="nav navbar-nav navbar-right">
+          <a href="/mainpage">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<ol class="breadcrumb">
+    <li><a (click)="main(hotel)">Home</a></li>
+    <li><a (click)="main(hotel)">{{hotel.userAccount}}</a></li>
+    <li class="active">Order</li>
+</ol>
+<div id="user" class="well well-lg">
+    <ul class="nav nav-pills nav-stacked">
+      <li ><a (click)="main(hotel)">Home-{{hotel.userAccount}}</a></li>
+      <li ><a (click)="modifyP(hotel)">Change Password</a></li>
+      <li><a (click)="comp(hotel)">Complete info</a></li>
+      <li ><a (click)="hotelman(hotel)">Managehotel</a></li>
+      <li class="active"><a (click)="hmorder(hotel)">Order</a></li>
+    </ul>
+</div>
+<div id="main" class="well well-lg" >
+    <div id="inner">
+        <form *ngIf="order.length > 0">
+            <table  class="table table-striped table-bordered">
+                  <tr>
+                    <th >Date
+                    </th>
+                    <th>Customer Information
+                    </th>
+                  </tr>
+                  <tr *ngFor="let o of order">
+                      <td>{{o.date}}</td>
+                      <td>{{o.firstName}} <br>{{o.lastName}} <br> {{o.email}} <br> {{o.phone}} <br>
+                      </td>
+                  </tr>
+                  
+            </table>
+        </form>
+        
+    
+    </div>
+</div>

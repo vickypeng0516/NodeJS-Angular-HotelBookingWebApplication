@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <div class="navbar-header">
+			<a class="navbar-brand" >Hotel Manager Main Page</a>
+    </div>
+    <div class="nav  navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a (click)="main(hotel)">HomePage</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Shortcut <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+						<li><a (click)="modifyP(hotel)">Change Password</a></li>
+						<li><a (click)="comp(hotel)">Complete info</a></li>
+						<li class="divider"></li>
+						<li><a (click)="hotelman(hotel)">Manage Hotel</a></li>
+					</ul>
+        </li>
+        <li class="nav navbar-nav navbar-right">
+          <a href="/mainpage">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<ol class="breadcrumb">
+	<li><a (click)="main(hotel)">Home</a></li>
+	<li  class="active">{{hotel.userAccount}}</li>
+</ol>
+<div class="well well-lg"  >
+	<div align="center"><h1>Dear Account User : {{hotel.userAccount}}</h1></div>
+</div>
+<div id="main" align="center">
+	<a  class="list-group-item" (click)="hotelman(hotel)">
+		Manage Hotel
+	</a>
+	<a (click)="modifyP(hotel)" class="list-group-item">Change Password</a>
+	<a (click)="comp(hotel)" class="list-group-item">Complete info</a>
+	<a (click)="hmorder(hotel)" class="list-group-item">Order</a>
+	<a href="/mainpage" class="list-group-item">Log out</a>
+</div>

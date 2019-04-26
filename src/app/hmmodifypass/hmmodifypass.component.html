@@ -1,0 +1,76 @@
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <div class="navbar-header">
+			<a class="navbar-brand" >Hotel Manager Main Page</a>
+    </div>
+    <div class="nav  navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a (click)="main(hotel)">HomePage</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Shortcut <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+						<li><a (click)="modifyP(hotel)">Change Password</a></li>
+						<li><a (click)="comp(hotel)">Complete info</a></li>
+						<li class="divider"></li>
+            <li><a (click)="hotelman(hotel)">Manage Hotel</a></li>
+            <li><a (click)="hmorder(hotel)">Order</a></li>
+					</ul>
+        </li>
+        <li class="nav navbar-nav navbar-right">
+          <a href="/mainpage">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<ol class="breadcrumb">
+	<li><a (click)="main(hotel)">Home</a></li>
+	<li><a (click)="main(hotel)">{{hotel.userAccount}}</a></li>
+	<li class="active">Change Password</li>
+</ol>
+<div id="user" class="well well-lg">
+  <ul class="nav nav-pills nav-stacked">
+    <li ><a (click)="main(hotel)">Home-{{hotel.userAccount}}</a></li>
+    <li class="active"><a (click)="modifyP(hotel)">Change Password</a></li>
+    <li><a (click)="comp(hotel)">Complete info</a></li>
+    <li><a (click)="hotelman(hotel)">Managehotel</a></li>
+    <li><a (click)="hmorder(hotel)">Order</a></li>
+  </ul>
+</div>
+<div id="main" class="well well-lg" >
+    <div id="inner">
+        <form id="form1" action="PasswordModifyServlet" method="post">
+            <table>
+                <tr>
+                    <td>Current Password
+                    </td>
+                    <td><div class="input-group">		
+                      <span class="input-group-addon">▽</span><input type="password" class="form-control" id="password" placeholder="Please input previous password" name="passwordprevious" style="width: 385px"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New Password</td>
+                    <td><div class="input-group"><span class="input-group-addon"> △</span><input type="password" class="form-control" id="password1" placeholder="Please input New password" name="password1" style="width: 385px; "></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm New Password
+                    </td>
+                    <td><div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-eye-close"></span></span>
+                      <input type="password" class="form-control"  id="password2" placeholder="Please input New password" name="password2" style="width: 385px; "></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                    <input type="button" id="verdict" (click)="checkp()" value="Change Password" class="btn btn-primary btn-lg " data-toggle="modal"  >
+                    </td> 
+                </tr>   
+            </table>
+            
+        </form>
+    </div>
+</div>

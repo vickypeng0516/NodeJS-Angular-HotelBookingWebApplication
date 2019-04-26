@@ -1,0 +1,43 @@
+<div class="header">
+  <h1>Join us today!</h1>
+</div>
+<div class="EntirePage">
+  <div id="register">
+    <button id="register-button1" class="btn btn-primary" routerLink="/mainpage" (click)="setdefault()">Back to home page</button>
+    <button id="tutorial-button" class="btn btn-primary" (click)='tutorialmessage()'>Tutorial</button>
+    <div class="divtitle">
+      <h1>I am a new user, create a new account</h1>
+      <div class="divcontent">
+        <p>Create user account:</p>
+        <input type="text" class="infoinput" id="user-account" placeholder="e.g. abc@cde.com"  style="width: 385px">
+        <p>Create password:</p>
+        <input type="password" class="infoinput" id="user-password" placeholder="e.g. abc1234cc"  style="width: 385px">
+        <p>Confirm password:</p>
+        <input type="password" class="infoinput" id="confirm-password" style="width: 385px">
+        <p>I am a:</p>
+        <span class="hint" id="hint4">⭕️</span><label class="btn btn-primary">
+          <input type="radio" name="options" id="option-traveller" value="travler"> traveller 
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option-manager" value="manager">  hotel manager 
+        </label>  
+    </div>
+  </div>
+  <button id="join-button1" class="btn btn-primary" (click)="check()">Join now!</button>
+  </div>
+  <div id="login">
+    <div class="divtitle">
+      <h1>I already had an account, log in here!</h1>
+      <div class="divcontent">
+          <p>User account:</p>
+          <input type="text" class="infoinput" id="login-user-account" style="width: 385px">
+          <p>Please enter your password:</p>
+          <input type="password" class="infoinput" id="login-user-password" style="width: 385px"><br/><br/>
+          <button id="login-button1" class="btn btn-primary" (click)="checklogin()" (click)="setdefault()">Let's get it started!</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>Author: Yanfei Peng, Mingchang Chen, Haozheng Yi, Enshu Shang. 2019, Apr.</p>
+</div>

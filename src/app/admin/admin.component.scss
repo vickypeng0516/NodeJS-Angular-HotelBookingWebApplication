@@ -1,0 +1,70 @@
+.header{
+    font-size:40px;
+    text-align: center;
+    border:solid black,2px;
+    background-color:grey;
+}
+
+.body{
+    position:absolute;
+    height: 500px;
+    width:900px;
+    border:transparent black 1px;
+    font-size:40px;
+    text-align:center;
+    background-color:lightblue;
+    top:56px;
+    left:260px;
+}
+
+#password{
+    position:relative;
+    left:270px;
+    
+}
+
+#Login{
+    position:absolute;
+    size:60px;
+    
+    
+}
+
+#Reset{
+    position:absolute;
+    size:60px;
+    padding-left:100px;
+    padding-top:400px;
+}
+
+.logo{
+    height:60px;
+    position:relative;
+    padding:50px;
+    margin:30px;
+}
+
+#hotel{
+    position:relative;
+    padding-left:30px;
+}
+
+.AU{
+    padding-top:30px;
+}
+
+.pic1{
+    position:relative;
+
+}
+
+.pic2{
+    position: absolute;
+    top:56px;
+    left:1160px;
+}
+
+#password{
+    position:absolute;
+    left:550px;
+}
