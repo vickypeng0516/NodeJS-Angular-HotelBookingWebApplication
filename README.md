@@ -1,26 +1,30 @@
-# Final
+# Final Project Hotel Booking Web Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Author: Yanfei Peng, Haozheng Yi, Enshu Shang, Mingchang Chen
 
-## Project description 
+## Frameworks and Tools
+  ###### - Backend : NodeJS, ExpressJS, RESTful API
+  ###### - Database : MongoDB
+  ###### - Frontend : Angular, Bootstrap 4.0
+  ###### - Build Tool : NPM
+  ###### - Other: Log4j, Junit
+  
+## Features
+  ###### - Three role registration & Login as amdin, hotel manager or traveler
+  ###### - Traveler browse for all avaiable hotels or search hotels by name
+  ###### - Traveler book for hotel
+  ###### - Traveler view all his/her bookings
+  ###### - Hotel manager CRUD hotel information, personal information
+  ###### - Hotel manager manage all user's bookings
+  ###### - Admin manager all hotel manager, user account and hotel information
 
-In this final project, we should build a site with angular/cli for the front-end and REST API for the back-end. We plan to design a website for traveller to find a hotel where they can stay the night, and for hotel manager to upload the information of their hotel to make more benefit. The traveller could also book more than one hotels at the same time and the information of all hotels could be viewed as an order. Plus, we have the third kind of user who is called the admin. The account and password of admin is granted by the system and the task of admin is to view and delete users (including traveller and hotel manager), hotels and orders information.
+## Team members and assignment
 
-## Project requirement
-
-Angular for the front-end, NODE JS for back-end and MongoDB for Database.
-The application should have soe form to create, read, update and delete operation.
-Front-end and back-end in different directory.
-Follow the folder structure in assignment 7 and 8.
-Proper documentation.
-Every team member have multiple commits on GitHub.
-
-## Team member and the assigned part of the entire project 
-
-Yanfei Peng: Traveller component including view hotels, add to order and view orders.
-Haozheng Yi: Hotel manager component including upload hotel information and complete personal information.
-Enshu Shang: Admin component including view and delete order, user and hotel information.
-Mingchang Chen: Mainpage component, including main page, new user registration and old user login.
+  ###### Yanfei Peng: Traveller component including view hotels, add to order and view orders.
+  ###### Haozheng Yi: Hotel manager component including upload hotel information and complete personal information.
+  ###### Enshu Shang: Admin component including view and delete order, user and hotel information.
+  ###### Mingchang Chen: Mainpage component, including main page, new user registration and old user login.
 
 ## Development server
 
@@ -44,7 +48,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## How to run
 
-Run node server.js first in a terminal to start the back-end server. Then, run ng serve in another terminal to start angular/cli. Fianlly, visit localhost:4200 to get access to our homepage.
+Run `node server.js` first in a terminal to start the back-end server. Then, run `ng serve` in another terminal to start angular/cli. Fianlly, visit localhost:4200.
 
 ## Further help
 
